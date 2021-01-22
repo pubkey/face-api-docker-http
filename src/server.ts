@@ -41,7 +41,7 @@ export function startServer(port: number): Promise<Server> {
 
 
     return new Promise(res => {
-        const server = app.listen(port, () => {
+        const server = app.listen(port, '0.0.0.0', () => {
             console.log('Started server on port ' + port);
             res(server);
         });

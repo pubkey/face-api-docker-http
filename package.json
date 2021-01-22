@@ -3,9 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "description": "A microservice for face-api.js to detect faces in images via HTTP requests",
+  "main": "./dist/index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
-    "test": "ts-mocha  --bail --exit ./test/test.ts"
+    "start": "ts-node ./src/index.ts --unhandled-rejections=strict",
+    "test": "ts-mocha  --bail --exit ./test/test.ts --unhandled-rejections=strict"
   },
   "repository": {
     "type": "git",
