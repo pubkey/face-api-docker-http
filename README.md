@@ -8,7 +8,7 @@ Docker compose:
 
 ```yml
   face-api:
-    build: https://github.com/pubkey/face-api-docker-http/blob/main/Dockerfile
+    build: https://github.com/pubkey/face-api-docker-http.git
     ports:
       - "8080:8080"
 ```
