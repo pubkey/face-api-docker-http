@@ -14,6 +14,13 @@ export function startServer(port: number): Promise<Server> {
     app.use(bodyParser.json({ limit: '50mb' }));
     app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 
+    // info to show it is up
+    app.get('/', async (req, res, next) => {
+        res.json({
+            up: true
+        });
+    });
+
     // image upload method
     app.post('/upload', upload.single('image'), async (req, res, next) => {
         console.log('# got image via upload');
