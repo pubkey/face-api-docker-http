@@ -1,1 +1,1 @@
- docker build -t aa . && docker run aa -p 8080:8080
+(cd .. && docker build -t aa . && docker run aa -p 5006:5006)

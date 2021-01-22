@@ -1,7 +1,4 @@
 import express from 'express';
-import type {
-    Express
-} from 'express';
 import * as bodyParser from 'body-parser';
 
 import { detectFaces } from './detect-faces';
@@ -15,14 +12,14 @@ export function startServer(port: number): Promise<Server> {
     app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 
     // info to show it is up
-    app.get('/', async (req, res, next) => {
+    app.get('/', async (req, res) => {
         res.json({
             up: true
         });
     });
 
     // image upload method
-    app.post('/upload', upload.single('image'), async (req, res, next) => {
+    app.post('/upload', upload.single('image'), async (req, res) => {
         console.log('# got image via upload');
         console.dir((req as any).file);
         const imageBuffer: Buffer = (req as any).file.buffer;
@@ -31,7 +28,7 @@ export function startServer(port: number): Promise<Server> {
     });
 
     // base64 method
-    app.post('/base64', async (req, res, next) => {
+    app.post('/base64', async (req, res) => {
         console.log('# got image as base64');
         const base64 = req.body.image;
         const imageBuffer = Buffer.from(base64, 'base64');

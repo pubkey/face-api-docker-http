@@ -13,5 +13,5 @@ WORKDIR /app
 RUN rm -rf node_modules
 RUN npm --build-from-source install --no-audit
 
-EXPOSE 8080
+EXPOSE 5006
 ENTRYPOINT ["npm", "run", "start"]

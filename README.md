@@ -10,7 +10,7 @@ Docker compose:
   face-api:
     build: https://github.com/pubkey/face-api-docker-http.git
     ports:
-      - "8080:8080"
+      - "5006:5006"
 ```
 
 Example curl request:
