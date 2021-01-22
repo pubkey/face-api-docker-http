@@ -1,5 +1,6 @@
 {
   "name": "face-api-docker-http",
+  "private": true,
   "version": "1.0.0",
   "description": "A microservice for face-api.js to detect faces in images via HTTP requests",
   "scripts": {
@@ -11,7 +12,7 @@
     "url": "git+https://github.com/pubkey/face-api-docker-http.git"
   },
   "author": "pubkey",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pubkey/face-api-docker-http/issues"
   },
