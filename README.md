@@ -18,7 +18,7 @@ Example curl request:
 ```bash
 curl \
        -F 'image=@./face.jpg'                 \
-       -f http://localhost:8080/upload > out.json
+       -f http://localhost:5006/upload > out.json
 ```
 
 Example request with [got](https://github.com/sindresorhus/got):
@@ -30,7 +30,7 @@ const postData = {
     image: base64data
 };
 const response = await got.post<DetectedFace[]>({
-    url: 'http://localhost:' + port + '/base64',
+    url: 'http://localhost:5006/base64',
     responseType: 'json',
     json: postData
 });

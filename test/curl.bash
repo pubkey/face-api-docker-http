@@ -1,3 +1,3 @@
 curl \
        -F 'image=@./face.jpg'                 \
-       -f http://localhost:8080/upload > out.json
+       -f http://localhost:5006/upload > out.json
