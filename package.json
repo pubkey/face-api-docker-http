@@ -5,7 +5,7 @@
   "description": "A microservice for face-api.js to detect faces in images via HTTP requests",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts --unhandled-rejections=strict",
+    "start": "ts-node ./src/index.ts --unhandled-rejections=strict label=face-api",
     "test": "ts-mocha  --bail --exit ./test/test.ts --unhandled-rejections=strict"
   },
   "repository": {
